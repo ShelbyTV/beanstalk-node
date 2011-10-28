@@ -16,6 +16,7 @@ var bspool = require('../index.js').build(opts);
 bspool.init(function(){
   var attempt = 1000; 
   var completed = 0;
+  
   for (var i = 0 ; i < 1000 ; i++){
     bspool.put({"job": i }, function(){
       completed += 1;
