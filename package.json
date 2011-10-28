@@ -7,5 +7,5 @@
       "respool" : "git://github.com/mkrecny/Respool.js.git",
       "shelby-config" : "git+ssh://git@github.com:ShelbyTV/shelby-config.git"
   }
-  , "main": "./factory.js"
+  , "main": "./index.js"
 }
