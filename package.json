@@ -1,0 +1,11 @@
+{
+    "name": "beanstalk-node"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "beanstalk_client" : ">=0.2.0",
+      "respool" : "git://github.com/mkrecny/Respool.js.git",
+      "shelby-config" : "git+ssh://git@github.com:ShelbyTV/shelby-config.git"
+  }
+  , "main": "./factory.js"
+}
