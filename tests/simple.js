@@ -1,19 +1,21 @@
-var reserve_callback = function(job, del){
-  del();  
+var bspool = require('../index.js');
+
+bspool.emitter.on('newjob', function(job, del){
+  del();
+});
+
+bspool.emitter.on('log', function(level, msg){
+  console.log(msg);
+});
+
+var opts = {
+  resTube : 'test',
+  putTube : 'test',
+  log_output : true ,
+  pool_size : 100
 };
 
-var opts ={
-  reserve_tube : 'test',
-  put_tube : 'test',
-  reserve_callback : reserve_callback,
-  pool_size : 200,
-  log_output : true,
-  json_encoding : true 
-};
-
-var bspool = require('../index.js').build(opts);
-
-bspool.init(function(){
+bspool.init(opts, function(){
   var attempt = 1000; 
   var completed = 0;
   
@@ -21,10 +23,8 @@ bspool.init(function(){
     bspool.put({"job": i }, function(){
       completed += 1;
       if (completed===attempt){
-        console.error('TEST PASSED :-)');
-        process.exit();
+        console.error('PUT 1000');
       }
     });
   }
-
 });

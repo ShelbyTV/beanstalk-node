@@ -3,9 +3,11 @@
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
+      "factory-node" : "git://github.com/ShelbyTV/factory-node.git",
       "beanstalk_client" : ">=0.2.0",
       "respool" : "git://github.com/mkrecny/Respool.js.git",
-      "shelby-config" : "git+ssh://git@github.com:ShelbyTV/shelby-config.git"
+      "shelby-config" : "git+ssh://git@github.com:ShelbyTV/shelby-config.git",
+      "eventemitter2" : "git://github.com/hij1nx/EventEmitter2.git"
   }
   , "main": "./index.js"
 }
