@@ -4,7 +4,7 @@
   , "private": true
   , "dependencies": {
       "factory-node" : "git://github.com/ShelbyTV/factory-node.git",
-      "beanstalk_client" : ">=0.2.0",
+      "beanstalk_client" : "git://github.com/mkrecny/node-beanstalk-client.git",
       "respool" : "git://github.com/mkrecny/Respool.js.git",
       "shelby-config" : "git+ssh://git@github.com:ShelbyTV/shelby-config.git",
       "eventemitter2" : "git://github.com/hij1nx/EventEmitter2.git"
