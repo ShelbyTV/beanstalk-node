@@ -8,5 +8,5 @@ if (!process.env.NODE_ENV){
 }
 
 var factory = require('factory-node');
-var super = require('./lib/bspool.js');
-module.exports = factory.build(super);
+var _super = require('./lib/bspool.js');
+module.exports = factory.build(_super);
