@@ -40,6 +40,10 @@ var opts = {
 
 bspool.init(opts, function(){
   for (var i = 0 ; i < ATTEMPT ; i++){
-    bspool.put({"job": i }, put_callback);
+    if (i%2){
+      bspool.put({"job": i }, put_callback);
+    } else {
+      bspool.put({"job": i }, put_callback, 'test-2');
+    }
   }
 });
