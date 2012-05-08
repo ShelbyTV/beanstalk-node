@@ -43,7 +43,7 @@ bspool.init(opts, function(){
     if (i%2){
       bspool.put({"job": i }, put_callback);
     } else {
-      bspool.put({"job": i }, put_callback, 'test-2');
+      bspool.put({"job": i }, put_callback, 'test-2', false);
     }
   }
 });
